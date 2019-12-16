@@ -41,7 +41,7 @@ MonoBehaviour:
     maximumLODLevelMode: 0
   m_RenderPipelineSettings:
     supportShadowMask: 1
-    supportSSR: 0
+    supportSSR: 1
     supportSSAO: 1
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     supportTransparentDepthPrepass: 1
     supportTransparentDepthPostpass: 1
     colorBufferFormat: 74
-    supportedLitShaderMode: 2
+    supportedLitShaderMode: 3
     supportDecals: 1
     msaaSampleCount: 1
     supportMotionVectors: 1
