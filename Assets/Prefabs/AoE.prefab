@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 992146338244121837}
   m_Layer: 0
   m_Name: AoE
-  m_TagString: Untagged
+  m_TagString: aoe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

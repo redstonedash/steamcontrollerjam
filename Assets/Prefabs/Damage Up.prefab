@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7514868580863515950}
   m_Layer: 0
   m_Name: Damage Up
-  m_TagString: Untagged
+  m_TagString: dmg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,9 +65,9 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 1, g: 0, b: 0.01999569, a: 0}
-          key1: {r: 0, g: 0, b: 0, a: 1}
-          key2: {r: 0.5, g: 0.5, b: 0.5, a: 0.8}
+          key0: {r: 0.3018868, g: 0, b: 0, a: 0}
+          key1: {r: 0.9254902, g: 0.08235295, b: 0.2598255, a: 1}
+          key2: {r: 0.95535713, g: 0, b: 0.019103024, a: 0.8}
           key3: {r: 0, g: 0, b: 0, a: 0}
           key4: {r: 0, g: 0, b: 0, a: 0}
           key5: {r: 0, g: 0, b: 0, a: 0}
@@ -75,7 +75,7 @@ VisualEffect:
           key7: {r: 0, g: 0, b: 0, a: 0}
           ctime0: 0
           ctime1: 65535
-          ctime2: 65535
+          ctime2: 41249
           ctime3: 0
           ctime4: 0
           ctime5: 0
