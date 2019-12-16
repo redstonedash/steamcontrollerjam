@@ -27,14 +27,26 @@ public class power : MonoBehaviour
         if(other.tag == "hp")
         {
             hp+=1.0f;
-        }
+            StartCoroutine(LateCall(other.gameObject));
+                }
         if (other.tag == "armor")
         {
             armor += 1.0f;
+            StartCoroutine(LateCall(other.gameObject));
         }
         if (other.tag == "aoe")
         {
             aoe=true;
+            StartCoroutine(LateCall(other.gameObject));
         }
+
+    }
+    IEnumerator LateCall(GameObject o)
+    {
+        o.SetActive(false);
+        yield return new WaitForSeconds(30);
+
+        o.SetActive(true);
+        //Do Function here...
     }
 }
