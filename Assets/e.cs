@@ -10,6 +10,7 @@ public class e : MonoBehaviour
     float error
         ;
     public int i;
+    public GameObject m;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +29,17 @@ public class e : MonoBehaviour
         if (new Vector3(g.rightStick.x.ReadValue(), 0, g.rightStick.y.ReadValue()).magnitude > 0.3
             )
         {
-            transform.forward=new Vector3(g.rightStick.ReadValue().x,0, g.rightStick.ReadValue().y);
+            transform.rotation= Quaternion.Lerp(transform.rotation, Quaternion.LookRotation( new Vector3(g.rightStick.ReadValue().x, 0, g.rightStick.ReadValue().y)), Time.deltaTime*4);
         }
         //Input.mousePosition   
         RaycastHit hit;
         Ray r = new Ray(transform.position, Vector3.down);
         Physics.Raycast(r,out hit);
         Pid(hit.point.y+1.5f,60,-0.5f,-0.25f);
+        if (g.rightTrigger.isPressed)
+        {
+            GameObject.Instantiate(m,transform.position,transform.rotation);
+        }
     }
     void A(Vector3 w, float s, float a)
     {

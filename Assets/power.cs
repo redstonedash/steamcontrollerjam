@@ -3,7 +3,7 @@ using System.Collections;
 
 public class power : MonoBehaviour
 {
-    float hp = 1.0f;
+    public float hp = 1.0f;
     float armor = 0.0f;
     bool aoe;
     // Use this for initialization
@@ -48,5 +48,15 @@ public class power : MonoBehaviour
 
         o.SetActive(true);
         //Do Function here...
+    }
+    void damage(float d)
+    {
+        hp -= d;
+        if (hp <= 0)
+        {
+            hp=1;
+            var s=GameObject.FindGameObjectsWithTag("spawn");
+            transform.position=s[Random.Range(0,s.Length-1)].transform.position;
+        }
     }
 }
