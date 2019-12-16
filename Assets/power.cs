@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro; 
 
 public class power : MonoBehaviour
 {
     public float hp = 1.0f;
     float armor = 0.0f;
     bool aoe;
+    public TMP_Text score;
+    private int points;
     // Use this for initialization
     void Start()
     {
@@ -54,6 +57,8 @@ public class power : MonoBehaviour
         hp -= d;
         if (hp <= 0)
         {
+            points = points + 1;
+            score.text = points.ToString();
             Random.seed = System.DateTime.Now.Millisecond;
             hp =1;
             var s=GameObject.FindGameObjectsWithTag("spawn");
