@@ -7,6 +7,7 @@ public class e : MonoBehaviour
     Rigidbody r ;
     float error
         ;
+    public int i;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,11 @@ public class e : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       A(new Vector3(Input.GetAxis("h"),0 ,Input.GetAxis("v")),10,2);
+        if(new Vector3(Input.GetAxisRaw(i + "h"), 0, Input.GetAxis(i + "v")).magnitude>0.3
+            )
+        { 
+        A(new Vector3(Input.GetAxisRaw(i+"h"),0 ,Input.GetAxis(i + "v")),10,2);
+        }
         //Input.mousePosition   
         RaycastHit hit;
         Ray r = new Ray(transform.position, Vector3.down);
@@ -27,7 +32,7 @@ public class e : MonoBehaviour
     {
        float c=Vector3.Dot(r.velocity,w);
         float adds = s-c;
-        float ace=Mathf.Min(adds,a*s)
+        float ace=Mathf.Min(adds,a*s);;
             ;
         r.velocity+=ace*w*Time.deltaTime;
         
