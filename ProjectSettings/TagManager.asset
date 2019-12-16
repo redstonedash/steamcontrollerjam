@@ -8,6 +8,8 @@ TagManager:
   - aoe
   - armor
   - dmg
+  - spawn
+  - bullet
   layers:
   - Default
   - TransparentFX
@@ -18,10 +20,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - bullet
+  - player
+  - bullet2
+  - player2
   - 
   - 
   - 

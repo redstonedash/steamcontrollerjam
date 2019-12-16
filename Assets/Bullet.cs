@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = transform.forward*200;
+        GetComponent<Rigidbody>().velocity = transform.right*100;
     }
 
     // Update is called once per frame
@@ -17,6 +17,8 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject.Destroy(transform.gameObject ,0.1f);
+        if (collision.rigidbody&&collision.rigidbody.tag == "Player") collision.rigidbody.GetComponent<power>().damage(0.5f);
+        GameObject.Destroy(transform.gameObject ,0);
+        
     }
 }

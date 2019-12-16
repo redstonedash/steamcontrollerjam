@@ -11,10 +11,13 @@ public class e : MonoBehaviour
         ;
     public int i;
     public GameObject m;
+    float bullettm=0.2f;
+    float bullett;
     // Start is called before the first frame update
     void Start()
     {
         r=GetComponent<Rigidbody>();
+        bullett=bullettm;
     }
 
     // Update is called once per frame
@@ -36,10 +39,12 @@ public class e : MonoBehaviour
         Ray r = new Ray(transform.position, Vector3.down);
         Physics.Raycast(r,out hit);
         Pid(hit.point.y+1.5f,60,-0.5f,-0.25f);
-        if (g.rightTrigger.isPressed)
+        if (g.rightTrigger.isPressed&&bullett<=0)
         {
-            GameObject.Instantiate(m,transform.position,transform.rotation);
+            GameObject.Instantiate(m,transform.position,transform.rotation).transform.right=transform.forward;
+            bullett=bullettm;
         }
+        bullett-=Time.deltaTime;
     }
     void A(Vector3 w, float s, float a)
     {

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1181932156351952757}
   - component: {fileID: 4459506968694790629}
   - component: {fileID: 2037794740369601305}
-  - component: {fileID: 8731420216169647543}
-  m_Layer: 9
-  m_Name: P1 Bullet
+  - component: {fileID: 6134835944331199334}
+  m_Layer: 11
+  m_Name: P1 Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e455baab58e67140b672bcf3991ebdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &8731420216169647543
+--- !u!65 &6134835944331199334
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1381177927411959446}
   - component: {fileID: 8052182152752644427}
   - component: {fileID: 3859993477579470607}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Pick Up 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 9014076225566387672}
   - component: {fileID: 8834169162788902910}
   - component: {fileID: 8064987877316605174}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
