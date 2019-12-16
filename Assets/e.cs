@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class e : MonoBehaviour
 {
+
     Rigidbody r ;
     float error
         ;
@@ -17,10 +19,16 @@ public class e : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(new Vector3(Input.GetAxisRaw(i + "h"), 0, Input.GetAxis(i + "v")).magnitude>0.3
+        var g = Gamepad.all[i];
+        if(new Vector3(g.leftStick.x.ReadValue(), 0, g.leftStick.y.ReadValue()).magnitude>0.3
             )
         { 
-        A(new Vector3(Input.GetAxisRaw(i+"h"),0 ,Input.GetAxis(i + "v")),10,2);
+        A(new Vector3(g.leftStick.x.ReadValue(), 0, g.leftStick.y.ReadValue()), 10,2);
+        }
+        if (new Vector3(g.rightStick.x.ReadValue(), 0, g.rightStick.y.ReadValue()).magnitude > 0.3
+            )
+        {
+            transform.forward=new Vector3(g.rightStick.ReadValue().x,0, g.rightStick.ReadValue().y);
         }
         //Input.mousePosition   
         RaycastHit hit;
