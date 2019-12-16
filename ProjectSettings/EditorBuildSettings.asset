@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 0970f9dad2457bc499a6f2a14f3ba05f
+  - enabled: 1
+    path: Assets/Scenes/p1win.unity
+    guid: bf3f279c8aec51c4a8cb197f7f9dcd1f
+  - enabled: 1
+    path: Assets/Scenes/p1win 1.unity
+    guid: 109be9f7edf04524ea47b28513b3298b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2b00cfefbccfc2b449e9f83ecd2c5f9e,
       type: 2}

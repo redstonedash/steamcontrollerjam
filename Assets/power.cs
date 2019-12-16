@@ -8,7 +8,7 @@ public class power : MonoBehaviour
     float armor = 0.0f;
     bool aoe;
     public TMP_Text score;
-    private int points;
+    public int points;
     // Use this for initialization
     void Start()
     {
